@@ -12,15 +12,18 @@ public class Application {
         VirtualPet firstPet = new VirtualPet(name);
         System.out.println(firstPet.getName());
 
-        for (; ; ) {
+        while (true) {
             System.out.println("What would you like to do?");
             String userCommand = scanner.nextLine();
-            switch (userCommand) {
+            switch (userCommand.toLowerCase()) {
                 case "feed":
                     firstPet.feed();
                     break;
                 case "play":
                     firstPet.play();
+                    break;
+                case "quit":
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Unknown command, please try again.");
