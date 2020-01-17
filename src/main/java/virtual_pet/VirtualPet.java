@@ -4,7 +4,7 @@ public class VirtualPet {
 
     private final String name;
     private int age;
-    private final String color;
+    private String color;
     private int hunger;
     private int happiness;
     private String feelings;
@@ -17,6 +17,10 @@ public class VirtualPet {
         this.hunger = hunger;
         this.happiness = happiness;
         this.feelings = feelings;
+    }
+
+    public VirtualPet(String name) {
+        this.name = name;
     }
 
     // Default constructor
