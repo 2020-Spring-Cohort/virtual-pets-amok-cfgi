@@ -66,4 +66,26 @@ public class VirtualPetTest {
 
         assertEquals(2, result);
     }
+
+    @Test
+    public void shouldIncreaseHunger() {
+        VirtualPet pet = new VirtualPet();
+
+        assertEquals(10, pet.getHunger());
+
+        int result = pet.increaseHunger();
+
+        assertEquals(15, result);
+    }
+
+    @Test
+    public void shouldDecreaseHappiness() {
+        VirtualPet pet = new VirtualPet();
+
+        assertEquals(50, pet.getHappiness());
+
+        int result = pet.decreaseHappiness();
+
+        assertEquals(45, result);
+    }
 }
