@@ -68,4 +68,9 @@ public class VirtualPet {
     public int play() {
         return happiness += 10;
     }
+
+    public void tick() {
+        increaseHunger();
+        decreaseHappiness();
+    }
 }

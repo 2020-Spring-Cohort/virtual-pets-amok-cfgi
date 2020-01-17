@@ -32,7 +32,7 @@ public class VirtualPetTest {
 
     @Test
     public void shouldHaveTenHunger() {
-    
+
 
         int result = pet.getHunger();
 
@@ -116,5 +116,17 @@ public class VirtualPetTest {
         int result = pet.play();
 
         assertEquals(60, pet.getHappiness());
+    }
+    @Test
+    public void shouldTick(){
+
+        assertEquals(10, pet.getHunger());
+
+        assertEquals(50, pet.getHappiness());
+
+         pet.tick();
+
+         assertEquals(13, pet.getHunger());
+         assertEquals(45, pet.getHappiness());
     }
 }
