@@ -75,7 +75,7 @@ public class VirtualPetTest {
 
         int result = pet.increaseHunger();
 
-        assertEquals(15, result);
+        assertEquals(13, result);
     }
 
     @Test
@@ -87,5 +87,27 @@ public class VirtualPetTest {
         int result = pet.decreaseHappiness();
 
         assertEquals(45, result);
+    }
+
+    @Test
+    public void shouldFeedThePet() {
+        VirtualPet pet = new VirtualPet();
+
+        assertEquals(10, pet.getHunger());
+
+        int result = pet.feed();
+
+        assertEquals(5, pet.getHunger());
+    }
+
+    @Test
+    public void shouldPlayWithThePet() {
+        VirtualPet pet = new VirtualPet();
+
+        assertEquals(50, pet.getHappiness());
+
+        int result = pet.play();
+
+        assertEquals(60, pet.getHappiness());
     }
 }

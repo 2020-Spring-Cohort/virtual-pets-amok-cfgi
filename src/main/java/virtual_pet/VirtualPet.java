@@ -3,11 +3,11 @@ package virtual_pet;
 public class VirtualPet {
 
     private final String name;
-    private int age;
-    private String color;
-    private int hunger;
-    private int happiness;
-    private String feelings;
+    private int age = 2;
+    private String color = "Brown";
+    private int hunger = 10;
+    private int happiness = 50;
+    private String feelings = "Happy";
 
     // Parameterized constructor
     public VirtualPet(String name, int age, String color, int hunger, int happiness, String feelings) {
@@ -25,18 +25,8 @@ public class VirtualPet {
 
     // Default constructor
     public VirtualPet() {
-
+        // Empty
         this.name = "John";
-
-        this.color = "Brown";
-
-        this.hunger = 10;
-
-        this.feelings = "Happy";
-
-        this.happiness = 50;
-
-        this.age = 2;
     }
 
     public String getName() {
@@ -64,10 +54,18 @@ public class VirtualPet {
     }
 
     public int increaseHunger() {
-        return hunger += 5;
+        return hunger += 3;
     }
 
     public int decreaseHappiness() {
         return happiness -= 5;
+    }
+
+    public int feed() {
+        return hunger -= 5;
+    }
+
+    public int play() {
+        return happiness += 10;
     }
 }
