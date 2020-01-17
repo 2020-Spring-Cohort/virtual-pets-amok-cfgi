@@ -62,4 +62,12 @@ public class VirtualPet {
     public int getAge() {
         return age;
     }
+
+    public int increaseHunger() {
+        return hunger += 5;
+    }
+
+    public int decreaseHappiness() {
+        return happiness -= 5;
+    }
 }
