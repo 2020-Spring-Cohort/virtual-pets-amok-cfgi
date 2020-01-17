@@ -28,6 +28,11 @@ public class VirtualPet {
 
         this.hunger = 10;
 
+        this.feelings = "Happy";
+
+        this.happiness = 50;
+
+        this.age = 2;
     }
 
     public String getName() {
@@ -36,5 +41,21 @@ public class VirtualPet {
 
     public int getHunger() {
         return hunger;
+    }
+
+    public String getFeelings() {
+        return feelings;
+    }
+
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
