@@ -58,11 +58,15 @@ public class VirtualPet {
     }
 
     public int decreaseHappiness() {
-        return happiness -= 5;
+        happiness -= 3;
+
+        return Math.max(happiness, 0);
     }
 
     public int feed() {
-        return hunger -= 5;
+        hunger -= 5;
+
+        return Math.max(hunger, 0);
     }
 
     public int play() {
