@@ -17,6 +17,8 @@ public class VirtualPetTest {
 
         String result = pet.getName();
 
+        System.out.println("hi");
+
         assertEquals("John", result);
     }
 
