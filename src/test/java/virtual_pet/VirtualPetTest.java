@@ -3,6 +3,8 @@ package virtual_pet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VirtualPetTest {
@@ -27,8 +29,12 @@ public class VirtualPetTest {
     }
 
     @Test
-    public void shouldInsertMultiplePets(){
-        shelter.getPet();
+    public void shouldInsertMultiplePets() {
+        List<VirtualPet> list = shelter.getPets();
+
+        for (VirtualPet pet : list) {
+            assertEquals("John", pet.getName());
+        }
     }
 
     @Test
