@@ -8,15 +8,27 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class VirtualPetTest {
 
     private VirtualPet pet;
+    private VirtualPetShelter shelter;
 
     @BeforeEach
     void setUp() {
         pet = new VirtualPet();
+        shelter = new VirtualPetShelter();
     }
 
     @Test
     public void shouldInstantiate() {
         VirtualPet pet = new VirtualPet();
+    }
+
+    @Test
+    public void shouldInstantiateShelter(){
+        VirtualPetShelter shelter = new VirtualPetShelter();
+    }
+
+    @Test
+    public void shouldInsertMultiplePets(){
+        shelter.getPet();
     }
 
     @Test
