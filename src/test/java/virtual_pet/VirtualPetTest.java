@@ -141,4 +141,5 @@ public class VirtualPetTest {
         assertEquals(13, pet.getHunger());
         assertEquals(47, pet.getHappiness());
     }
+
 }
