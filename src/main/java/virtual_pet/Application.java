@@ -22,9 +22,18 @@ public class Application {
             switch (userCommand.toLowerCase()) {
                 case "feed":
                     //firstPet.feed();
+                    shelter.feedAllPets();
                     break;
                 case "play":
-                    //firstPet.play();
+
+                    for (VirtualPet pet : shelter.getPets().values()) {
+                        System.out.println(pet);
+                    }
+                    System.out.println("Which pet would you like to play with?");
+                    userCommand = scanner.nextLine();
+                    VirtualPet chosenPet = shelter.getPets().get(userCommand);
+                    chosenPet.play();
+
                     break;
                 case "quit":
                     System.exit(0);
@@ -34,11 +43,12 @@ public class Application {
                     for (VirtualPet pet : shelter.getPets().values()) {
                         System.out.println(pet);
                     }
-                    break;
+                    continue;
                 default:
                     System.out.println("Unknown command, please try again.");
             }
-            //firstPet.tick();
+            shelter.tickAllPets();
+
             //showPetInfo(firstPet);
         }
     }
