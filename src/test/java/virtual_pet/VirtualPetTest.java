@@ -3,7 +3,7 @@ package virtual_pet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,34 +24,28 @@ public class VirtualPetTest {
     }
 
     @Test
-    public void shouldInstantiateShelter(){
+    public void shouldInstantiateShelter() {
         VirtualPetShelter shelter = new VirtualPetShelter();
     }
 
     @Test
     public void shouldInsertMultiplePets() {
-        List<VirtualPet> list = shelter.getPets();
+        HashMap<String, VirtualPet> petHashMap = shelter.getPets();
 
-        for (VirtualPet pet : list) {
+        for (VirtualPet pet : petHashMap.values()) {
             assertEquals("John", pet.getName());
         }
     }
 
     @Test
     public void shouldSayTheirName() {
-        
-
         String result = pet.getName();
-
-        System.out.println("hi");
 
         assertEquals("John", result);
     }
 
     @Test
     public void shouldHaveTenHunger() {
-
-
         int result = pet.getHunger();
 
         assertEquals(10, result);
@@ -59,8 +53,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldSayTheirFeelings() {
-
-
         String result = pet.getFeelings();
 
         assertEquals("Happy", result);
@@ -68,8 +60,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldHaveDefaultHappiness() {
-
-
         int result = pet.getHappiness();
 
         assertEquals(50, result);
@@ -77,8 +67,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldHaveDefaultColor() {
-
-
         String result = pet.getColor();
 
         assertEquals("Brown", result);
@@ -86,8 +74,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldHaveDefaultAge() {
-
-
         int result = pet.getAge();
 
         assertEquals(2, result);
@@ -95,8 +81,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldIncreaseHunger() {
-
-
         assertEquals(10, pet.getHunger());
 
         int result = pet.increaseHunger();
@@ -106,7 +90,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldDecreaseHappiness() {
-
         assertEquals(50, pet.getHappiness());
 
         int result = pet.decreaseHappiness();
@@ -116,8 +99,6 @@ public class VirtualPetTest {
 
     @Test
     public void shouldFeedThePet() {
-
-
         assertEquals(10, pet.getHunger());
 
         int result = pet.feed();
@@ -127,22 +108,19 @@ public class VirtualPetTest {
 
     @Test
     public void shouldPlayWithThePet() {
-
-
         assertEquals(50, pet.getHappiness());
 
         int result = pet.play();
 
         assertEquals(60, pet.getHappiness());
     }
+
     @Test
-    public void shouldTick(){
-
+    public void shouldTick() {
         assertEquals(10, pet.getHunger());
-
         assertEquals(50, pet.getHappiness());
 
-         pet.tick();
+        pet.tick();
 
         assertEquals(13, pet.getHunger());
         assertEquals(47, pet.getHappiness());

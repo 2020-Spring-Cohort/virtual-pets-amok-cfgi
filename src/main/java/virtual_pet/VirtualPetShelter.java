@@ -1,13 +1,12 @@
 package virtual_pet;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class VirtualPetShelter {
 
-    private List<VirtualPet> pets = new ArrayList<>();
+    private HashMap<String, VirtualPet> pets = new HashMap<>();
 
-    public List<VirtualPet> getPets() {
+    public HashMap<String, VirtualPet> getPets() {
         return pets;
     }
 }
