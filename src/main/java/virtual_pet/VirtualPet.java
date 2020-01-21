@@ -5,7 +5,7 @@ public class VirtualPet {
     private final String name;
     private int age = 2;
     private String color = "Brown";
-    private int hunger = 10;
+    private int hunger = 20;
     private int happiness = 50;
     private String feelings = "Happy";
 
@@ -77,7 +77,7 @@ public class VirtualPet {
     }
 
     public int feed() {
-        hunger -= 5;
+        hunger -= 20;
 
         if (hunger < 0) {
             hunger = 0;
@@ -86,7 +86,7 @@ public class VirtualPet {
     }
 
     public int play() {
-        return happiness += 10;
+        return happiness += 20;
     }
 
     public void tick() {

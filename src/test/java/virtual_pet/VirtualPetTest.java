@@ -60,7 +60,7 @@ public class VirtualPetTest {
     public void shouldHaveTenHunger() {
         int result = pet.getHunger();
 
-        assertEquals(10, result);
+        assertEquals(20, result);
     }
 
     @Test
@@ -74,10 +74,10 @@ public class VirtualPetTest {
     public void shouldTickAllPets() {
         shelter.getPets().put("John", new VirtualPet());
         shelter.getPets().put("bob", new VirtualPet("bob"));
-        assertEquals(10, shelter.getPets().get("John").getHunger());
+        assertEquals(20, shelter.getPets().get("John").getHunger());
         assertEquals(50, shelter.getPets().get("bob").getHappiness());
         shelter.tickAllPets();
-        assertEquals(13, shelter.getPets().get("John").getHunger());
+        assertEquals(23, shelter.getPets().get("John").getHunger());
         assertEquals(47, shelter.getPets().get("bob").getHappiness());
 
 
@@ -114,11 +114,11 @@ public class VirtualPetTest {
 
     @Test
     public void shouldIncreaseHunger() {
-        assertEquals(10, pet.getHunger());
+        assertEquals(20, pet.getHunger());
 
         int result = pet.increaseHunger();
 
-        assertEquals(13, result);
+        assertEquals(23, result);
     }
 
     @Test
@@ -132,11 +132,11 @@ public class VirtualPetTest {
 
     @Test
     public void shouldFeedThePet() {
-        assertEquals(10, pet.getHunger());
+        assertEquals(20, pet.getHunger());
 
         int result = pet.feed();
 
-        assertEquals(5, pet.getHunger());
+        assertEquals(0, pet.getHunger());
     }
 
     @Test
@@ -145,17 +145,17 @@ public class VirtualPetTest {
 
         int result = pet.play();
 
-        assertEquals(60, pet.getHappiness());
+        assertEquals(70, pet.getHappiness());
     }
 
     @Test
     public void shouldTick() {
-        assertEquals(10, pet.getHunger());
+        assertEquals(20, pet.getHunger());
         assertEquals(50, pet.getHappiness());
 
         pet.tick();
 
-        assertEquals(13, pet.getHunger());
+        assertEquals(23, pet.getHunger());
         assertEquals(47, pet.getHappiness());
     }
 
