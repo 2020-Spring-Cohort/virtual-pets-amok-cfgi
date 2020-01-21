@@ -38,6 +38,18 @@ public class VirtualPetTest {
     }
 
     @Test
+    public void shouldAddAPetToShelter() {
+        shelter.getPets().put("John", new VirtualPet());
+        assertEquals(1, shelter.getPets().size());
+        assertEquals(2, shelter.getPets().get("John").getAge());
+
+        shelter.getPets().put("Colin", new VirtualPet("Colin"));
+        assertEquals(2, shelter.getPets().size());
+        assertEquals(2, shelter.getPets().get("Colin").getAge());
+
+    }
+
+    @Test
     public void shouldSayTheirName() {
         String result = pet.getName();
 
@@ -50,6 +62,27 @@ public class VirtualPetTest {
 
         assertEquals(10, result);
     }
+
+    @Test
+    public void shouldFeedAllShelterPets() {
+        shelter.getPets().put("John", new VirtualPet());
+        shelter.getPets().put("bob", new VirtualPet("bob"));
+        shelter.feedAllPets();
+    }
+
+    @Test
+    public void shouldTickAllPets() {
+        shelter.getPets().put("John", new VirtualPet());
+        shelter.getPets().put("bob", new VirtualPet("bob"));
+        assertEquals(10, shelter.getPets().get("John").getHunger());
+        assertEquals(50, shelter.getPets().get("bob").getHappiness());
+        shelter.tickAllPets();
+        assertEquals(13, shelter.getPets().get("John").getHunger());
+        assertEquals(47, shelter.getPets().get("bob").getHappiness());
+
+
+    }
+
 
     @Test
     public void shouldSayTheirFeelings() {

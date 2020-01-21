@@ -9,4 +9,20 @@ public class VirtualPetShelter {
     public HashMap<String, VirtualPet> getPets() {
         return pets;
     }
+
+    public void feedAllPets() {
+
+        for (VirtualPet pet : getPets().values()) {
+            pet.feed();
+        }
+
+    }
+
+    public void tickAllPets() {
+        for (VirtualPet pet : getPets().values()) {
+            pet.increaseHunger();
+            pet.decreaseHappiness();
+        }
+
+    }
 }

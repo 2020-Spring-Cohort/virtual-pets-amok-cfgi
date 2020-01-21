@@ -29,6 +29,16 @@ public class VirtualPet {
         this.name = "John";
     }
 
+    @Override
+    public String toString() {
+        return name + ": "
+                + "    Age: " + age
+                + "    Color: " + color
+                + "    Hunger: " + hunger
+                + "    Happiness: " + happiness
+                + "    Feeling: " + feelings;
+    }
+
     public String getName() {
         return name;
     }
