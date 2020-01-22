@@ -31,12 +31,12 @@ public class VirtualPet {
 
     @Override
     public String toString() {
-        return name + ": "
+        return name + ": \n"
                 + "    Age: " + age
-                + "    Color: " + color
-                + "    Hunger: " + hunger
-                + "    Happiness: " + happiness
-                + "    Feeling: " + feelings;
+                + "\n    Color: " + color
+                + "\n    Hunger: " + hunger
+                + "\n    Happiness: " + happiness
+                + "\n    Feeling: " + feelings;
     }
 
     public String getName() {

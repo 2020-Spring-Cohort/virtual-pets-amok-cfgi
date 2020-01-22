@@ -11,18 +11,22 @@ public class Application {
         String name = scanner.nextLine();
         addPetToShelter(shelter, new VirtualPet(name));
 
-
-        shelter.getPets().put("John", new VirtualPet());
-        shelter.getPets().put("Dewy", new VirtualPet("Dewy"));
-        shelter.getPets().put("JoeJoe", new VirtualPet("JoeJoe"));
-
         while (true) {
             System.out.println("What would you like to do?");
             String userCommand = scanner.nextLine();
             switch (userCommand.toLowerCase()) {
                 case "feed":
-                    //firstPet.feed();
                     shelter.feedAllPets();
+                    break;
+
+                case "adopt":
+                    System.out.println("Enter the new pets name!");
+
+                    String chosenName = scanner.nextLine();
+
+                    addPetToShelter(shelter, new VirtualPet(chosenName));
+
+                    System.out.println(chosenName + " was added to the shelter!");
                     break;
                 case "play":
 
@@ -31,7 +35,14 @@ public class Application {
                     }
                     System.out.println("Which pet would you like to play with?");
                     userCommand = scanner.nextLine();
-                    VirtualPet chosenPet = shelter.getPets().get(userCommand);
+                    VirtualPet chosenPet = shelter.getPets().get(userCommand.toUpperCase());
+
+                    if (chosenPet == null) {
+                        System.out.println("There is no pet named " + userCommand);
+
+                        continue;
+                    }
+
                     chosenPet.play();
 
                     break;
@@ -48,8 +59,6 @@ public class Application {
                     System.out.println("Unknown command, please try again.");
             }
             shelter.tickAllPets();
-
-            //showPetInfo(firstPet);
         }
     }
 
@@ -60,7 +69,7 @@ public class Application {
     }
 
     public static void addPetToShelter(VirtualPetShelter shelter, VirtualPet pet) {
-        shelter.getPets().put(pet.getName(), pet);
+        shelter.getPets().put(pet.getName().toUpperCase(), pet);
     }
 
 
