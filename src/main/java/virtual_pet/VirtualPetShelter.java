@@ -20,8 +20,7 @@ public class VirtualPetShelter {
 
     public void tickAllPets() {
         for (VirtualPet pet : getPets().values()) {
-            pet.increaseHunger();
-            pet.decreaseHappiness();
+            pet.tick();
         }
 
     }

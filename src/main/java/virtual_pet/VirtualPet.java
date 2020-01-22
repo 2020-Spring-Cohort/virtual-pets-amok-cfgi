@@ -92,5 +92,18 @@ public class VirtualPet {
     public void tick() {
         increaseHunger();
         decreaseHappiness();
+        determineMood();
+    }
+
+    private void determineMood() {
+        if (happiness > 50 && hunger > 50) {
+            feelings = "Hungry";
+        } else if (happiness < 50 && hunger > 50) {
+            feelings = "Angry";
+        } else if (happiness > 50 && hunger < 50) {
+            feelings = "Happy";
+        } else {
+            feelings = "Lonely";
+        }
     }
 }

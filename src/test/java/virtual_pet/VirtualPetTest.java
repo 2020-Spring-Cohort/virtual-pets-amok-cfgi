@@ -159,4 +159,14 @@ public class VirtualPetTest {
         assertEquals(47, pet.getHappiness());
     }
 
+    @Test
+    public void petsShouldBeSad() {
+
+        assertEquals("Happy", pet.getFeelings());
+
+        pet.tick();
+
+        assertEquals("Angry", pet.getFeelings());
+    }
+
 }
