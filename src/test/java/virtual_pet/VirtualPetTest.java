@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class VirtualPetTest {
 
@@ -166,7 +167,35 @@ public class VirtualPetTest {
 
         pet.tick();
 
-        assertEquals("Angry", pet.getFeelings());
+        assertEquals("Lonely", pet.getFeelings());
+    }
+
+    @Test
+    public void petShouldBeOrganicDog() {
+        VirtualPet organicDog = new OrganicDog();
+
+        assertTrue(organicDog instanceof Organic);
+    }
+
+    @Test
+    public void petShouldBeOrganicCat() {
+        VirtualPet organicCat = new OrganicCat();
+
+        assertTrue(organicCat instanceof Organic);
+    }
+
+    @Test
+    public void petShouldBeRoboticDog() {
+        VirtualPet roboticDog = new RoboticDog();
+
+        assertTrue(roboticDog instanceof Robotic);
+    }
+
+    @Test
+    public void petShouldBeRoboticCat() {
+        Robotic roboticCat = new RoboticCat();
+
+        assertTrue(roboticCat instanceof Robotic);
     }
 
 }
