@@ -24,4 +24,9 @@ public class VirtualPetShelter {
         }
 
     }
+
+    public static void addPetToShelter(VirtualPetShelter shelter, VirtualPet pet) {
+        shelter.getPets().put(pet.getName().toUpperCase(), pet);
+        //move method to shelter class
+    }
 }

@@ -2,6 +2,8 @@ package virtual_pet;
 
 import java.util.Scanner;
 
+import static virtual_pet.VirtualPetShelter.addPetToShelter;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -30,6 +32,14 @@ public class Application {
                     break;
                 case "play":
 
+                    if (shelter.getPets().size() == 1) {
+                        VirtualPet onlyPet = shelter.getPets().get(name.toUpperCase());
+                        onlyPet.play();
+                        System.out.println("You played with " + onlyPet.getName() + "!");
+                        showPetInfo(onlyPet);
+                        break;
+                    }
+
                     for (VirtualPet pet : shelter.getPets().values()) {
                         System.out.println(pet);
                     }
@@ -44,6 +54,9 @@ public class Application {
                     }
 
                     chosenPet.play();
+
+                    System.out.println("You played with " + chosenPet.getName() + "!");
+                    showPetInfo(chosenPet);
 
                     break;
                 case "clean":
@@ -83,10 +96,6 @@ public class Application {
         System.out.println("Hunger: " + pet.getHunger());
         System.out.println("Happiness: " + pet.getHappiness());
         System.out.println("Hygiene: " + pet.getHygiene());
-    }
-
-    public static void addPetToShelter(VirtualPetShelter shelter, VirtualPet pet) {
-        shelter.getPets().put(pet.getName().toUpperCase(), pet);
     }
 
 
