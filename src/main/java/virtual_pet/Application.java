@@ -19,8 +19,8 @@ public class Application {
                     shelter.feedAllPets();
                     break;
 
-                case "adopt":
-                    System.out.println("Enter the new pets name!");
+                case "rescue":
+                    System.out.println("Enter the new pet's name");
 
                     String chosenName = scanner.nextLine();
 
@@ -46,6 +46,22 @@ public class Application {
                     chosenPet.play();
 
                     break;
+                case "clean":
+                    for (VirtualPet pet : shelter.getPets().values()) {
+                        System.out.println(pet);
+                    }
+                    System.out.println("Which pet would you like to play with?");
+                    userCommand = scanner.nextLine();
+                    VirtualPet chosenPetClean = shelter.getPets().get(userCommand.toUpperCase());
+
+                    if (chosenPetClean == null) {
+                        System.out.println("There is no pet named " + userCommand);
+
+                        continue;
+                    }
+                    chosenPetClean.clean();
+                    break;
+
                 case "quit":
                     System.exit(0);
                     break;
@@ -66,6 +82,7 @@ public class Application {
         System.out.println(pet.getName());
         System.out.println("Hunger: " + pet.getHunger());
         System.out.println("Happiness: " + pet.getHappiness());
+        System.out.println("Hygiene: " + pet.getHygiene());
     }
 
     public static void addPetToShelter(VirtualPetShelter shelter, VirtualPet pet) {
