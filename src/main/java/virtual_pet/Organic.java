@@ -20,6 +20,12 @@ public abstract class Organic extends VirtualPet {
 
     @Override
     public String toString() {
-        return super.toString();
+        return getName() + ":" +
+                "\n    Type: " + getType() +
+                "\n    Hunger: " + getHunger() +
+                "\n    Happiness: " + getHappiness() +
+                "\n    Cleanliness: " + getPetCleanliness() +
+                "\n    Feeling: " + getFeelings() +
+                "\n    Hygiene: " + getHygiene();
     }
 }

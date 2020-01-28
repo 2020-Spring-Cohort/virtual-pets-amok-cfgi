@@ -72,6 +72,10 @@ public class VirtualPet {
         return petHygiene;
     }
 
+    public int getPetCleanliness() {
+        return petCleanliness;
+    }
+
     public int increaseHunger() {
         return hunger += 3;
     }
