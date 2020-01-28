@@ -8,7 +8,7 @@ public class Application {
     public static void main(String[] args) {
         VirtualPetShelter shelter = new VirtualPetShelter();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Name your pet");
+        System.out.println("Name your pet:");
         String name = scanner.nextLine();
         shelter.addPetToShelter(new VirtualPet(name));
 
@@ -21,11 +21,20 @@ public class Application {
                     break;
 
                 case "rescue":
-                    System.out.println("Enter the new pet's name");
+                    System.out.println("Enter the new pet's name:");
 
                     String chosenName = scanner.nextLine();
 
                     shelter.addPetToShelter(new VirtualPet(chosenName));
+
+                    System.out.println("Is this a dog, or a cat?");
+
+                    String petSpecies = scanner.nextLine();
+
+                    System.out.println("Is this pet robotic or organic?");
+
+                    String petRoboticOrganic = scanner.nextLine();
+
 
                     System.out.println(chosenName + " was added to the shelter!");
                     break;
