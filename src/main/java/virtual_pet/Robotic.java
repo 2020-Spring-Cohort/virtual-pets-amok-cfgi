@@ -53,11 +53,17 @@ public abstract class Robotic extends VirtualPet {
     }
 
     private void decreaseOilLevel() {
-        oilLevel -= 3;
+        if (isPoweredOn()) {
+            oilLevel -= 3;
+            if (oilLevel < 0) oilLevel = 0;
+        }
+        needsOil = oilLevel < 10;
     }
 
     private void decreaseBatteryLevel() {
-        batteryLevel -= 4;
+        batteryLevel -= 6;
+        if (batteryLevel < 0) batteryLevel = 0;
+        poweredOn = batteryLevel != 0;
     }
 
     @Override
