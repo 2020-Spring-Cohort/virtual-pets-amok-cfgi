@@ -2,7 +2,6 @@ package virtual_pet;
 
 import java.util.Scanner;
 
-import static virtual_pet.VirtualPetShelter.addPetToShelter;
 
 public class Application {
 
@@ -11,7 +10,7 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Name your pet");
         String name = scanner.nextLine();
-        addPetToShelter(shelter, new VirtualPet(name));
+        shelter.addPetToShelter(new VirtualPet(name));
 
         while (true) {
             System.out.println("What would you like to do?");
@@ -26,7 +25,7 @@ public class Application {
 
                     String chosenName = scanner.nextLine();
 
-                    addPetToShelter(shelter, new VirtualPet(chosenName));
+                    shelter.addPetToShelter(new VirtualPet(chosenName));
 
                     System.out.println(chosenName + " was added to the shelter!");
                     break;
@@ -63,7 +62,7 @@ public class Application {
                     for (VirtualPet pet : shelter.getPets().values()) {
                         System.out.println(pet);
                     }
-                    System.out.println("Which pet would you like to play with?");
+                    System.out.println("Which pet would you like to clean?");
                     userCommand = scanner.nextLine();
                     VirtualPet chosenPetClean = shelter.getPets().get(userCommand.toUpperCase());
 
