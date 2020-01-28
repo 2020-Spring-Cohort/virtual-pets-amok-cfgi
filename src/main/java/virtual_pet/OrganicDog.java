@@ -22,6 +22,8 @@ public class OrganicDog extends Organic {
 
         exercise += 30;
 
+        System.out.println("You walked " + getName());
+
     }
 
 

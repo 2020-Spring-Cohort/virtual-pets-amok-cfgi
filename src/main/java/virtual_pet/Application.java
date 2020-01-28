@@ -69,6 +69,13 @@ public class Application {
                 case "quit":
                     System.exit(0);
                     break;
+                case "walk":
+                    for (VirtualPet pet : shelter.getPets().values()) {
+                        if (pet instanceof OrganicDog)
+                            ((OrganicDog) pet).walkTheDog();
+                    }
+                    break;
+
                 case "list":
                     System.out.println("Here is a list of all the pets at the shelter.");
                     for (VirtualPet pet : shelter.getPets().values()) {
