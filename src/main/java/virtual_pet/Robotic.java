@@ -2,13 +2,13 @@ package virtual_pet;
 
 public abstract class Robotic extends VirtualPet {
 
-    protected int oilLevel;
+    protected int oilLevel = 100;
 
-    protected boolean needsOil;
+    protected boolean needsOil = false;
 
-    protected boolean poweredOn;
+    protected boolean poweredOn = true;
 
-    protected int batteryLevel;
+    protected int batteryLevel = 100;
 
     protected String type;
 
@@ -50,6 +50,20 @@ public abstract class Robotic extends VirtualPet {
 
     public void changeBattery() {
         batteryLevel = 100;
+    }
+
+    private void decreaseOilLevel() {
+        oilLevel -= 3;
+    }
+
+    private void decreaseBatteryLevel() {
+        batteryLevel -= 4;
+    }
+
+    @Override
+    public void tick() {
+        decreaseOilLevel();
+        decreaseBatteryLevel();
     }
 
     public abstract void changeOil();

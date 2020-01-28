@@ -28,7 +28,6 @@ public class Application {
                         VirtualPet onlyPet = shelter.getPets().get(shelter.getPets().keySet().toArray()[0].toString().toUpperCase());
                         onlyPet.play();
                         System.out.println("You played with " + onlyPet.getName() + "!");
-                        showPetInfo(onlyPet);
                         break;
                     }
 
@@ -48,7 +47,6 @@ public class Application {
                     chosenPet.play();
 
                     System.out.println("You played with " + chosenPet.getName() + "!");
-                    showPetInfo(chosenPet);
 
                     break;
                 case "clean":
@@ -65,6 +63,7 @@ public class Application {
                         continue;
                     }
                     chosenPetClean.clean();
+                    System.out.println(chosenPetClean.getName() + " was cleaned!");
                     break;
 
                 case "quit":
@@ -84,14 +83,6 @@ public class Application {
         }
 
 
-    }
-
-
-    public static void showPetInfo(VirtualPet pet) {
-        System.out.println(pet.getName());
-        System.out.println("Hunger: " + pet.getHunger());
-        System.out.println("Happiness: " + pet.getHappiness());
-        System.out.println("Hygiene: " + pet.getHygiene());
     }
 
 

@@ -49,6 +49,8 @@ public class VirtualPetShelter {
             addPetToShelter(new OrganicDog(chosenName));
         } else {
             System.out.println("I'm sorry, that is not a valid pet.");
+
+            return;
         }
 
 
