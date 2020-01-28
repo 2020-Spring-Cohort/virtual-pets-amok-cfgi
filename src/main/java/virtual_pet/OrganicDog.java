@@ -1,6 +1,8 @@
 package virtual_pet;
 
 public class OrganicDog extends Organic {
+
+
     private int exercise;
 
     public int getExercise() {
@@ -9,6 +11,12 @@ public class OrganicDog extends Organic {
 
     public void setExercise(int exercise) {
         this.exercise = exercise;
+    }
+
+    public void walkTheDog() {
+
+        exercise += 30;
+
     }
 
 

@@ -16,7 +16,4 @@ public abstract class Organic extends VirtualPet {
         return needsToPoop;
     }
 
-
-
-
 }

@@ -87,7 +87,10 @@ public class Application {
                     System.out.println("Unknown command, please try again.");
             }
             shelter.tickAllPets();
+
         }
+
+
     }
 
     public static void showPetInfo(VirtualPet pet) {
