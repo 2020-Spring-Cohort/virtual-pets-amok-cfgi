@@ -18,6 +18,11 @@ public class OrganicDog extends Organic {
         this.exercise = exercise;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\n    Exercise: " + getExercise();
+    }
+
     public void walkTheDog() {
 
         exercise += 30;
