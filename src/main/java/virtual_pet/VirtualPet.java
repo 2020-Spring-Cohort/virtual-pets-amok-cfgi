@@ -8,7 +8,7 @@ public class VirtualPet {
     private int hunger = 20;
     private int happiness = 50;
     private String feelings = "Happy";
-    private int petCleanliness = 25;
+    protected int petCleanliness = 25;
     private String petHygiene = "Clean";
 
     // Parameterized constructor
@@ -114,7 +114,7 @@ public class VirtualPet {
         determineMood();
     }
 
-    private void decreaseCleanliness() {
+    public void decreaseCleanliness() {
         petCleanliness -= 3;
         if (petCleanliness < 0) {
             petCleanliness = 0;

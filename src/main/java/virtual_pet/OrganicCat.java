@@ -6,4 +6,12 @@ public class OrganicCat extends Organic {
         super(name);
         type = "Cat";
     }
+
+    @Override
+    public void decreaseCleanliness() {
+        petCleanliness -= 1;
+        if (petCleanliness < 0) {
+            petCleanliness = 0;
+        }
+    }
 }
