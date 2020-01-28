@@ -114,7 +114,7 @@ public class VirtualPet {
         determineMood();
     }
 
-    public void decreaseCleanliness() {
+    protected void decreaseCleanliness() {
         petCleanliness -= 3;
         if (petCleanliness < 0) {
             petCleanliness = 0;
