@@ -2,15 +2,14 @@ package virtual_pet;
 
 import java.util.Scanner;
 
-
 public class Application {
 
     public static void main(String[] args) {
         VirtualPetShelter shelter = new VirtualPetShelter();
+        System.out.println("Rescue your first pet!");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Name your pet:");
-        String name = scanner.nextLine();
-        shelter.addPetToShelter(new VirtualPet(name));
+        shelter.rescueNewPet(scanner);
+
 
         while (true) {
             System.out.println("What would you like to do?");
@@ -21,27 +20,12 @@ public class Application {
                     break;
 
                 case "rescue":
-                    System.out.println("Enter the new pet's name:");
-
-                    String chosenName = scanner.nextLine();
-
-                    shelter.addPetToShelter(new VirtualPet(chosenName));
-
-                    System.out.println("Is this a dog, or a cat?");
-
-                    String petSpecies = scanner.nextLine();
-
-                    System.out.println("Is this pet robotic or organic?");
-
-                    String petRoboticOrganic = scanner.nextLine();
-
-
-                    System.out.println(chosenName + " was added to the shelter!");
+                    shelter.rescueNewPet(scanner);
                     break;
                 case "play":
 
                     if (shelter.getPets().size() == 1) {
-                        VirtualPet onlyPet = shelter.getPets().get(name.toUpperCase());
+                        VirtualPet onlyPet = shelter.getPets().get(shelter.getPets().keySet().toArray()[0].toString().toUpperCase());
                         onlyPet.play();
                         System.out.println("You played with " + onlyPet.getName() + "!");
                         showPetInfo(onlyPet);
@@ -101,6 +85,7 @@ public class Application {
 
 
     }
+
 
     public static void showPetInfo(VirtualPet pet) {
         System.out.println(pet.getName());
