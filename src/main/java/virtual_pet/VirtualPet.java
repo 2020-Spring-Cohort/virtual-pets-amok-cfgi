@@ -106,8 +106,8 @@ public class VirtualPet {
     public void tick() {
         increaseHunger();
         decreaseHappiness();
-        determineMood();
         decreaseCleanliness();
+        determineMood();
     }
 
     private void decreaseCleanliness() {
