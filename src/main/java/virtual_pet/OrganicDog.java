@@ -5,6 +5,10 @@ public class OrganicDog extends Organic {
 
     private int exercise;
 
+    public OrganicDog() {
+        type = "Dog";
+    }
+
     public int getExercise() {
         return exercise;
     }
