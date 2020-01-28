@@ -2,19 +2,19 @@
 
 ### Instructions
 Use the following commands to interact with your virtual pets:
-- ___help___
+- __help__
     - Show a help menu displaying all available commands
     
-- ___rescue___
+- __rescue__
     - Rescue a new virtual pet of your choosing into the shelter
         - All new virtual pets start with default stats 
         
-- ___play___
+- __play__
     - Play with one of your virtual pets
         - Moderately raises the happiness of one virtual pet
         - You may only play with __one__ virtual pet per turn!
         
-- ___feed___
+- __feed__
     - Feed all virtual pets in your shelter
         - Slightly lowers hunger for all virtual pets
         
@@ -29,4 +29,4 @@ The following will happen every turn:
 - All organic pets will become dirtier
     - This will lower all organic pets cleanliness stat
     
-It is your job to take care of every virtual pet you adopt, use your turns __wisely__!
+Your sole purpose is to take care of every virtual pet you rescue, use your turns ___wisely___!
