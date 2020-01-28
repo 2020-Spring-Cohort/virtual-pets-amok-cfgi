@@ -1,6 +1,6 @@
-## Virtual Pets Amok - Team CFGI
+# Virtual Pets Amok - Team CFGI
 
-### Instructions
+## Instructions
 Use the following commands to interact with your virtual pets:
 - __help__
     - Show a help menu displaying all available commands
@@ -18,7 +18,11 @@ Use the following commands to interact with your virtual pets:
     - Feed all virtual pets in your shelter
         - Slightly lowers hunger for all virtual pets
         
-### Gameplay Mechanics
+- __list__
+    - Show a list of all virtual pets in your shelter and their different statistics
+        - Pets are shown in the order they were rescued in
+        
+## Gameplay Mechanics
 The following will happen every turn:
 - All pets will get more hungry
     - This will raise every pets hunger stat
@@ -29,4 +33,6 @@ The following will happen every turn:
 - All organic pets will become dirtier
     - This will lower all organic pets cleanliness stat
     
-Your sole purpose is to take care of every virtual pet you rescue, use your turns ___wisely___!
+After all statistics are changed, every pets feelings will be determined. 
+    
+##Your sole purpose is to take care of every virtual pet you rescue, use your turns ___wisely___!
