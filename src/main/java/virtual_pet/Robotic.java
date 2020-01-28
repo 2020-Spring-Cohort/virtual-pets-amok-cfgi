@@ -10,6 +10,12 @@ public abstract class Robotic extends VirtualPet {
 
     protected int batteryLevel;
 
+    protected String type;
+
+    public String getType() {
+        return type;
+    }
+
     public int getOilLevel() {
         return oilLevel;
     }
@@ -26,11 +32,17 @@ public abstract class Robotic extends VirtualPet {
         return batteryLevel;
     }
 
-    // Robots do not get hungry or sad
-//    @Override
-//    public String toString() {
-//        return
-//    }
+    // Robots do not get hungry or sad, feelings not included
+    @Override
+    public String toString() {
+        return getName() + ": " +
+                "\n    Type: " + getType() +
+                "\n    Oil level: " + getOilLevel() +
+                "\n    Battery level: " + getBatteryLevel() +
+                "\n    Powered on: " + (isPoweredOn() ? "yes" : "no") +
+                "\n    Needs oil: " + (isNeedsOil() ? "yes" : "no");
+
+    }
 
     public void changeBattery() {
         batteryLevel = 100;
