@@ -35,4 +35,4 @@ The following will happen every turn:
     
 After all statistics are changed, every pets feelings will be determined. 
     
-_Your sole purpose is to take care of every virtual pet you rescue, use your turns ___wisely___!_
+###_Your sole purpose is to take care of every virtual pet you rescue, use your turns ___wisely___!_
