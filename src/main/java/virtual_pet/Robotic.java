@@ -32,6 +32,10 @@ public abstract class Robotic extends VirtualPet {
         return batteryLevel;
     }
 
+    public Robotic(String name) {
+        super(name);
+    }
+
     // Robots do not get hungry or sad, feelings not included
     @Override
     public String toString() {

@@ -2,7 +2,8 @@ package virtual_pet;
 
 public class RoboticCat extends Robotic {
 
-    public RoboticCat() {
+    public RoboticCat(String name) {
+        super(name);
         type = "Robotic Cat";
     }
 

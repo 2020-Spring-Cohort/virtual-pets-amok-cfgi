@@ -5,7 +5,8 @@ public class OrganicDog extends Organic {
 
     private int exercise;
 
-    public OrganicDog() {
+    public OrganicDog(String name) {
+        super(name);
         type = "Dog";
     }
 
