@@ -26,12 +26,16 @@ Use the following commands to interact with your virtual pets:
         
 ## Gameplay Mechanics
 The following events will happen every turn:
-- All pets will get more hungry
+- All organic pets will get more hungry
     - This will raise every pets hunger stat   
-- All pets will get more lonely
+- All organic pets will get more lonely
     - This will lower every pets happiness stat   
 - All organic pets will become dirtier
     - This will lower all organic pets cleanliness stat
+- All robotic pets will eventually need an oil change
+    - This will lower all robotic pets oil level stat
+- All robotic pets will eventually need their batteries changed
+    - This will lower all robotic pets battery level stat
     
 After all statistics are changed, every pets feelings will be determined. 
     
