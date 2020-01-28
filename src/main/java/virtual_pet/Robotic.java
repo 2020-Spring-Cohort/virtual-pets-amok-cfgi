@@ -72,5 +72,16 @@ public abstract class Robotic extends VirtualPet {
         decreaseBatteryLevel();
     }
 
+    @Override
+    public void play() {
+        if (isNeedsOil() || !isPoweredOn()) {
+            System.out.println(getName() + " requires maintenance!");
+            System.out.println("Powered on: " + (isPoweredOn() ? "yes" : "no") + "\nNeeds oil: " + (isNeedsOil() ? "yes" : "no"));
+            return;
+        }
+        oilLevel -= 8;
+        batteryLevel -= 10;
+    }
+
     public abstract void changeOil();
 }

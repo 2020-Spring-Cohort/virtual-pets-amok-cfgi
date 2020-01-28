@@ -103,8 +103,8 @@ public class VirtualPet {
         return petCleanliness;
     }
 
-    public int play() {
-        return happiness += 20;
+    public void play() {
+        happiness += 20;
     }
 
     public void tick() {
