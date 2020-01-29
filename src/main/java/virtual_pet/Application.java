@@ -77,7 +77,7 @@ public class Application {
                     break;
 
                 case "help":
-                    System.out.println("Here are list of commands you may utilize: feed, play, rescue, list, walk, clean, or quit.");
+                    System.out.println("Here is a list of commands you may use: feed, play, rescue, list, walk, clean, or quit.");
                     break;
 
                 case "list":
