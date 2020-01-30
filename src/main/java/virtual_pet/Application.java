@@ -73,6 +73,8 @@ public class Application {
                     for (VirtualPet pet : shelter.getPets().values()) {
                         if (pet instanceof OrganicDog)
                             ((OrganicDog) pet).walkTheDog();
+                        else if (pet instanceof RoboticDog)
+                            ((RoboticDog) pet).walkTheDog();
                     }
                     break;
 

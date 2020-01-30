@@ -7,6 +7,12 @@ public class RoboticDog extends Robotic {
         type = "Robotic Dog";
     }
 
+    public void walkTheDog() {
+        oilLevel -= 10;
+
+        batteryLevel -= 10;
+    }
+
     @Override
     public void changeOil() {
         oilLevel += 30;
